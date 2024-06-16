@@ -11,7 +11,7 @@ const ProjectItems = () => {
   var x;
   var y;
   var thirdX = 0;
-  if (!!window) {
+  if (typeof window !== "undefined") {
     x = window.screen.width;
     y = window.screen.height;
     thirdX = x / 3;
