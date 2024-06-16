@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3 ',
+        '4/5': '4 / 5 ',
+        '3/5': '3 / 5 ',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
