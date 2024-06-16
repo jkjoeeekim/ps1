@@ -21,40 +21,41 @@ const ProjectItems = () => {
   const rowClass = `flex flex-row w-screen px-8 pb-8 h-[${thirdX * 1.3}px]`;
   const itemClassFirst = 'bg-[#f7f4ed] aspect-4/5 w-full h-full';
   const itemClass = 'bg-[#f7f4ed] ml-3 aspect-4/5 w-full h-full';
+  const imageClass = 'w-full h-full hover:bg-slate-200 duration-300 ease-in-out';
 
   return (
     <nav className='flex flex-col w-screen'>
       <nav className={rowClassFirst}>
         <section className={itemClassFirst}>
-          <Image src={image1} alt='Pic1' className='w-full h-full hover:bg-slate-200 duration-300 ease-in-out' style={{ objectFit: "cover" }}></Image>
+          <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Image src={image2} alt='Pic1' className='w-full h-full hover:bg-slate-200 duration-300 ease-in-out' style={{ objectFit: "cover" }}></Image>
+          <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Image src={image3} alt='Pic1' className='w-full h-full hover:bg-slate-200 duration-300 ease-in-out' style={{ objectFit: "cover" }}></Image>
+          <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
       <nav className={rowClass}>
         <section className={itemClassFirst}>
-
+          <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-
+          <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-
+          <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
       <nav className={rowClass}>
         <section className={itemClassFirst}>
-
+          <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-
+          <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-
+          <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
     </nav>
