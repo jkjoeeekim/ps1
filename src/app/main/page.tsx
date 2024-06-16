@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
-import MyCarousel from './centerCarousel';
+import MyCarousel from './MyCarousel';
 
 
 const MainPage = () => {
