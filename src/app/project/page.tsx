@@ -9,9 +9,14 @@ import image2 from '../assets/ps2.jpeg';
 import image3 from '../assets/ps3.jpeg';
 
 const ProjectPage = () => {
-  const x = window.screen.width;
-  const y = window.screen.height;
-  const thirdX = x / 3;
+  var x;
+  var y;
+  var thirdX = 0;
+  if(window) {
+    x = window.screen.width;
+    y = window.screen.height;
+    thirdX = x / 3;
+  }
 
   const rowClassFirst = `flex flex-row w-screen p-8 h-[${thirdX * 1.3}px]`;
   const rowClass = `flex flex-row w-screen px-8 pb-8 h-[${thirdX * 1.3}px]`;
