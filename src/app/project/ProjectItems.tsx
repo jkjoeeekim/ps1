@@ -20,8 +20,8 @@ const ProjectItems = () => {
 
   const rowClassFirst = `flex flex-row w-screen p-8 h-[${thirdX * 1.3}px]`;
   const rowClass = `flex flex-row w-screen px-8 pb-8 h-[${thirdX * 1.3}px]`;
-  const itemClassFirst = 'bg-[#f7f4ed] aspect-4/5 w-full h-full relative';
-  const itemClass = 'bg-[#f7f4ed] ml-3 aspect-4/5 w-full h-full relative';
+  const itemClassFirst = 'project__item opacity-50 bg-[#f7f4ed] aspect-4/5 w-full h-full relative';
+  const itemClass = 'project__item opacity-50 bg-[#f7f4ed] ml-3 aspect-4/5 w-full h-full relative';
   const imageClass = 'w-full h-full hover:bg-slate-200 duration-300 ease-in-out ';
   const blackBgClass = 'absolute w-full h-full opacity-0 hover:opacity-70 duration-300 ease-in-out cursor-pointer';
   const centerTextClass = 'absolute text-xl tracking-widest font-extrabold text-white h-max m-auto text-center top-1/2 w-max ml-auto mr-auto';
@@ -31,21 +31,21 @@ const ProjectItems = () => {
       <nav className={rowClassFirst}>
         <section className={itemClassFirst}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
@@ -54,21 +54,21 @@ const ProjectItems = () => {
       <nav className={rowClass}>
         <section className={itemClassFirst}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
@@ -77,21 +77,21 @@ const ProjectItems = () => {
       <nav className={rowClass}>
         <section className={itemClassFirst}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <div className={blackBgClass}>
-            <text className={centerTextClass}>Palo Alto Residence</text>  
+            <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </div>
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
