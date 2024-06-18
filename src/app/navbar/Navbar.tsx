@@ -27,7 +27,7 @@ const Navbar = () => {
   const navbarItems = gsap.utils.toArray<HTMLElement>('.navbar__item');
 
   navbarItems.forEach((obj, i) => {
-    gsap.fromTo(obj, { scale: 1.09 }, { scale: 1, opacity: 1, duration: 0.9, })
+    gsap.fromTo(obj, { scale: 1.03 }, { scale: 1, opacity: 1, duration: 0.9, })
   });
   }, { scope: container })
 
