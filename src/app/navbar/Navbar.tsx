@@ -10,7 +10,7 @@ import { useRef } from 'react';
 // ** NAVIGATION BAR CLASSES ** //
 const Header = "text-[#36261d] bg-[#d9c5ac] place-content-between h-min flex m-auto tracking-wide";
 const NavbarMainLink = "btn btn-ghost p-6 rounded-sm tracking-wider text-2xl hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out";
-const NavbarSideLinks = "btn btn-ghost pb-6 pt-6 pl-4 pr-4 rounded-sm text-sm hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out";
+const NavbarSideLinks = "btn btn-ghost pb-7 pt-7 pl-4 pr-4 rounded-sm text-sm hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out";
 
 const Navbar = () => {
 
