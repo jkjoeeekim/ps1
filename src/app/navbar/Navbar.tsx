@@ -15,8 +15,8 @@ const myFontBold = localFont({ src: "../../sinkin-sans/SinkinSans-400Regular.otf
 
 // ** NAVIGATION BAR CLASSES ** //
 const Header = "text-[#36261d] bg-[#d9c5ac] place-content-between h-[80px] flex m-auto tracking-wide";
-const NavbarMainLink = "btn btn-ghost py-6 px-8 rounded-sm tracking-wider text-2xl hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out";
-const NavbarSideLinks = `${myFontBold.className} btn btn-ghost py-8 px-8 pr-8 rounded-sm text-sm hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out`;
+const NavbarMainLink = "btn btn-ghost py-6 px-8 rounded-sm tracking-wider text-2xl hover:bg-[#fbf9f9] hover:tracking-widest duration-300 ease-in-out";
+const NavbarSideLinks = `${myFontBold.className} btn btn-ghost py-8 px-8 pr-8 rounded-sm text-sm hover:bg-[#fbf9f9] hover:tracking-widest duration-300 ease-in-out`;
 
 const Navbar = () => {
 

@@ -27,7 +27,7 @@ const ProjectPage = () => {
   }, { scope: container })
 
   return (
-    <main className='bg-[#f7f4ed]' ref={container}>
+    <main className='bg-[#fbf9f9]' ref={container}>
       <Navbar></Navbar>
       <ProjectItems></ProjectItems>
       <Footer></Footer>
