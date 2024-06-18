@@ -20,8 +20,8 @@ const ProjectItems = () => {
 
   const rowClassFirst = `flex flex-row w-screen p-8 h-[${thirdX * 1.3}px]`;
   const rowClass = `flex flex-row w-screen px-8 pb-8 h-[${thirdX * 1.3}px]`;
-  const itemClassFirst = 'project__item opacity-50 bg-[#f7f4ed] aspect-4/5 w-full h-full relative';
-  const itemClass = 'project__item opacity-50 bg-[#f7f4ed] ml-3 aspect-4/5 w-full h-full relative';
+  const itemClassFirst = 'project__item opacity-0 bg-[#f7f4ed] aspect-4/5 w-full h-full relative';
+  const itemClass = 'project__item opacity-0 bg-[#f7f4ed] ml-3 aspect-4/5 w-full h-full relative';
   const imageClass = 'w-full h-full hover:bg-slate-200 duration-300 ease-in-out ';
   const blackBgClass = 'absolute w-full h-full opacity-0 hover:opacity-70 duration-300 ease-in-out cursor-pointer';
   const centerTextClass = 'absolute text-xl tracking-widest font-extrabold text-white h-max m-auto text-center top-1/2 w-max ml-auto mr-auto';

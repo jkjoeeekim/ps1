@@ -20,7 +20,7 @@ const ProjectPage = () => {
     console.log(projectItem)
 
     projectItem.forEach((obj, i) => {
-      gsap.fromTo(obj, { scale: 0.97 }, { scale: 1, opacity: 1, duration: 2.1 })
+      gsap.fromTo(obj, { scale: 0.97 }, { scale: 1, opacity: 1, duration: 0.9 })
     });
 
     // tl.fromTo(classn[0], { scale: 0.2 }, { scale: 1 })
