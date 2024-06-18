@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 
 // ** NAVIGATION BAR CLASSES ** //
-const Header = "p-8 text-black bg-[#f7f4ed] place-content-between h-min flex m-auto tracking-wide";
-const NavbarMainLink = "btn btn-ghost p-8  rounded-sm text-2xl hover:bg-slate-200 hover:tracking-wider duration-300 ease-in-out";
-const NavbarSideLinks = "btn btn-ghost pb-10 pt-10 pl-4 pr-4  rounded-sm text-sm hover:bg-slate-200 hover:tracking-widest duration-300 ease-in-out";
+const Header = "p-8 text-black bg-[#d9c5ac] place-content-between h-min flex m-auto tracking-wide";
+const NavbarMainLink = "btn btn-ghost p-10 rounded-sm tracking-wider text-2xl hover:bg-[#f7f4ed] hover:tracking-widest hover:text-[#36261d] duration-300 ease-in-out";
+const NavbarSideLinks = "btn btn-ghost pb-10 pt-10 pl-4 pr-4 rounded-sm text-sm hover:bg-[#f7f4ed] hover:tracking-widest hover:text-[#36261d] duration-300 ease-in-out";
 
 const Navbar = () => {
   return (

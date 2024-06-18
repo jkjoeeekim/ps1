@@ -9,7 +9,7 @@ import { IconContext } from "react-icons";
 
 const Footer = () => {
   return (
-    <footer className='h-min text-black p-8 bg-[#f7f4ed]'>
+    <footer className='h-min text-black p-8 bg-[#d9c5ac]'>
       <div className='flex flex-row place-content-center'>
         <div className='flex flex-col place-content-center'>
           <Link href="/" className='place-content-center w-min m-auto'>

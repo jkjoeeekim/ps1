@@ -6,7 +6,7 @@ import Footer from '../footer/Footer';
 
 const ProjectPage = () => {
   return (
-    <main className=''>
+    <main className='bg-[#f7f4ed]'>
       <Navbar></Navbar>
       <ProjectItems></ProjectItems>
       <Footer></Footer>
