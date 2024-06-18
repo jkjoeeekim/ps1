@@ -27,18 +27,18 @@ const Navbar = () => {
   const navbarItems = gsap.utils.toArray<HTMLElement>('.navbar__item');
 
   navbarItems.forEach((obj, i) => {
-    gsap.fromTo(obj, { scale: 0.97 }, { scale: 1.0, opacity: 1, duration: 0.9, })
+    gsap.fromTo(obj, { scale: 1.09 }, { scale: 1, opacity: 1, duration: 0.9, })
   });
   }, { scope: container })
 
   return (
     <header className={Header} ref={container}>
-      <nav className='navbar__item opacity-75 h-min mt-auto mb-auto flex flex-row justify-start border-[#36261d] w-1/3'>
+      <nav className='navbar__item opacity-0 h-min mt-auto mb-auto flex flex-row justify-start border-[#36261d] w-1/3'>
         <Link href='/' className={NavbarMainLink}>
           ARGHAVAN CONCEPTS
         </Link>
       </nav>
-      <nav className='navbar__item opacity-75 h-min mt-auto mb-auto w-1/3 flex flex-row justify-end'>
+      <nav className='navbar__item opacity-0 h-min mt-auto mb-auto w-1/3 flex flex-row justify-end'>
         <Link href='/project' className={NavbarSideLinks}>
           PROJECTS
         </Link>

@@ -26,7 +26,7 @@ const ProcessPage = () => {
     console.log(mainClass)
 
     mainClass.forEach((obj, i) => {
-      gsap.fromTo(obj, { scale: 0.97 }, { opacity: 1, scale: 1, duration: 0.9 })
+      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9 })
     });    
   }, { scope: container })
 
