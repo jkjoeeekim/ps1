@@ -7,10 +7,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
+import localFont from "next/font/local";
+
+const myFontBold = localFont({ src: "../../sinkin-sans/SinkinSans-400Regular.otf" });
+
 // ** NAVIGATION BAR CLASSES ** //
 const Header = "text-[#36261d] bg-[#d9c5ac] place-content-between h-min flex m-auto tracking-wide";
 const NavbarMainLink = "btn btn-ghost p-6 rounded-sm tracking-wider text-2xl hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out";
-const NavbarSideLinks = "btn btn-ghost pb-7 pt-7 pl-4 pr-4 rounded-sm text-sm hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out";
+const NavbarSideLinks = `${myFontBold.className} btn btn-ghost pb-7 pt-7 pl-4 pr-4 rounded-sm text-sm hover:bg-[#f7f4ed] hover:tracking-widest duration-300 ease-in-out`;
 
 const Navbar = () => {
 
