@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Router from 'next/router';
 
 import ProjectItem from './ProjectItem';
 
@@ -29,11 +30,15 @@ const ProjectItems = () => {
   const blackBgClass = 'absolute w-full h-full opacity-0 hover:opacity-90 duration-300 ease-in-out cursor-pointer';
   const centerTextClass = 'absolute w-full h-1/2 text-xl tracking-widest font-extrabold text-white text-center top-1/2';
 
+
   return (
     <nav className='flex flex-col w-screen'>
       <nav className={rowClassFirst}>
         <section className={itemClassFirst}>
-          <Link className={blackBgClass} href=''>
+          <Link className={blackBgClass} href={{
+            pathname: '/project_item',
+            query: { project: 'test project' },
+          }}>
             <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
