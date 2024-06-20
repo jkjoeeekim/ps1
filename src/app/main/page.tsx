@@ -21,7 +21,7 @@ const MainPage = () => {
     console.log(classn)
 
     classn.forEach((obj, i) => {
-      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9 })
+      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power4.out' })
     });
   }, { scope: container })
 

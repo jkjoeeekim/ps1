@@ -17,10 +17,10 @@ const myFontBolder = localFont({ src: "../../sinkin-sans/SinkinSans-500Medium.ot
 //* color bg-[#d9c5ac] *//
 
 // ** NAVIGATION BAR CLASSES ** //
-const Header = "text-[#5d5e59] bg-[#B5C8C7] place-content-between h-[75px] flex m-auto tracking-wide";
-const NavbarMainLink = "btn btn-ghost px-8 tracking-widest text-4xl pt-8 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-700 ease-in-out";
-const NavbarSideLinks = `${myFontBold.className} btn btn-ghost px-8 text-sm tracking-widest pt-12 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-700 ease-in-out`;
-const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-8 text-sm tracking-widest pt-9 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-700 ease-in-out`;
+const Header = "text-[#5d5e59] bg-[#c0b7af] place-content-between h-[75px] flex m-auto tracking-wide";
+const NavbarMainLink = "btn btn-ghost px-8 tracking-widest text-4xl pt-8 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-500 ease-in-out";
+const NavbarSideLinks = `${myFontBold.className} btn btn-ghost px-8 text-sm tracking-widest pt-12 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
+const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-8 text-sm tracking-widest pt-9 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
 
 const Navbar = () => {
 
@@ -31,7 +31,7 @@ const Navbar = () => {
   const navbarItems = gsap.utils.toArray<HTMLElement>('.navbar__item');
 
   navbarItems.forEach((obj, i) => {
-    gsap.fromTo(obj, { scale: 1.03 }, { scale: 1, opacity: 1, duration: 0.9, })
+    gsap.fromTo(obj, { scale: 1.13 }, { scale: 1, opacity: 1, duration: 0.9, ease: 'power4.out', })
   });
   }, { scope: container })
 

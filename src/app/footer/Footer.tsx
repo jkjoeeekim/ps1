@@ -10,7 +10,7 @@ const myFontBold = localFont({ src: "../../sinkin-sans/SinkinSans-400Regular.otf
 
 const Footer = () => {
   return (
-    <footer className={`${myFontBold.className} h-min p-7 text-lg text-[#5d5e59] bg-[#B5C8C7] `}>
+    <footer className={`${myFontBold.className} h-min p-7 text-lg text-[#5d5e59] bg-[#c0b7af] `}>
       <div className='flex flex-row place-content-center'>
         <div className='flex flex-col place-content-center'>
           <Link href="/" className='place-content-center w-min m-auto'>

@@ -26,7 +26,7 @@ const ProcessPage = () => {
     console.log(mainClass)
 
     mainClass.forEach((obj, i) => {
-      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9 })
+      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power4.out' })
     });    
   }, { scope: container })
 
@@ -37,7 +37,7 @@ const ProcessPage = () => {
         <section className={imageSectionClass}>
           <Image src={image3} alt='pic' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
-        <section className='main__class opacity-0 w-1/3 h-[700px] mt-auto mb-auto px-7'>
+        <section className='main__class opacity-0 w-1/3 p-7'>
           <SideInformation></SideInformation>
         </section>
         <section className={imageSectionClass}>
