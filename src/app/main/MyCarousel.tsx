@@ -23,7 +23,7 @@ const MyCarousel = () => {
   }
   
   return (
-    <div id='default-carousel' className='my__carousel w-screen px-8 pt-8 m-auto opacity-0' data-carousel='slide'>
+    <div id='default-carousel' className='my__carousel w-screen px-4 pt-4 opacity-0' data-carousel='slide'>
       <Slider {...settings}>
         <div className='mb-8'>
           <Image src={image1} alt='Pic1' className=''></Image>

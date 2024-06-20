@@ -14,7 +14,7 @@ import image2 from '../assets/ps2.jpeg';
 import SideInformation from './SideInformation';
 
 const ProcessPage = () => {
-  const mainSectionClass = 'w-11/12 m-auto py-8 text-[#36261d] flex flex-row justify-evenly';
+  const mainSectionClass = 'p-4 text-[#36261d] flex flex-row justify-evenly';
   const imageSectionClass = 'main__class opacity-0 aspect-4/5 w-1/3';
   const imageClass = 'h-full';
 

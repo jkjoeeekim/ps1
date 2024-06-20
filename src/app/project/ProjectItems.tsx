@@ -21,10 +21,10 @@ const ProjectItems = () => {
     thirdX = x / 3;
   }
 
-  const rowClassFirst = `flex flex-row w-screen p-7 h-[${thirdX * 1.3}px]`;
-  const rowClass = `flex flex-row w-screen px-7 pb-7 h-[${thirdX * 1.3}px]`;
+  const rowClassFirst = `flex flex-row w-screen p-4 h-[${thirdX * 1.3}px]`;
+  const rowClass = `flex flex-row w-screen px-4 pb-4 h-[${thirdX * 1.3}px]`;
   const itemClassFirst = 'project__item opacity-0 bg-[#fbf9f9] aspect-4/5 w-full h-full relative';
-  const itemClass = 'project__item opacity-0 bg-[#fbf9f9] ml-7 aspect-4/5 w-full h-full relative';
+  const itemClass = 'project__item opacity-0 bg-[#fbf9f9] ml-4 aspect-4/5 w-full h-full relative';
   const imageClass = 'w-full h-full hover:bg-slate-200 duration-300 ease-in-out ';
   const blackBgClass = 'absolute w-full h-full opacity-0 hover:opacity-90 duration-300 ease-in-out cursor-pointer';
   const centerTextClass = 'absolute w-full h-1/2 text-xl tracking-widest font-extrabold text-white text-center top-1/2';
