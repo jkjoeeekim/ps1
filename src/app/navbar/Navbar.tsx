@@ -12,11 +12,15 @@ import { useRef } from 'react';
 import localFont from "next/font/local";
 
 const myFontBold = localFont({ src: "../../sinkin-sans/SinkinSans-400Regular.otf" });
+const myFontBolder = localFont({ src: "../../sinkin-sans/SinkinSans-500Medium.otf" });
+
+//* color bg-[#d9c5ac] *//
 
 // ** NAVIGATION BAR CLASSES ** //
-const Header = "text-[#36261d] bg-[#d9c5ac] place-content-between h-[80px] flex m-auto tracking-wide";
-const NavbarMainLink = "btn btn-ghost py-6 px-8 tracking-wider text-2xl hover:bg-[#fbf9f9] hover:tracking-widest duration-300 ease-in-out";
-const NavbarSideLinks = `${myFontBold.className} btn btn-ghost py-8 px-8 pr-8 text-sm hover:bg-[#fbf9f9] hover:tracking-widest duration-300 ease-in-out`;
+const Header = "text-[#5d5e59] bg-[#B5C8C7] place-content-between h-[75px] flex m-auto tracking-wide";
+const NavbarMainLink = "btn btn-ghost px-8 tracking-widest text-4xl pt-8 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-700 ease-in-out";
+const NavbarSideLinks = `${myFontBold.className} btn btn-ghost px-8 text-sm tracking-widest pt-12 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-700 ease-in-out`;
+const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-8 text-sm tracking-widest pt-9 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-700 ease-in-out`;
 
 const Navbar = () => {
 
@@ -33,12 +37,17 @@ const Navbar = () => {
 
   return (
     <header className={Header} ref={container}>
-      <nav className='navbar__item opacity-0 h-min mt-auto mb-auto flex flex-row justify-start border-[#36261d] w-1/3'>
+      <nav className='navbar__item opacity-0 h-full flex flex-row justify-start border-[#36261d] w-2/3'>
         <Link href='/' className={NavbarMainLink}>
-          ARGHAVAN CONCEPTS
+          STUDIO OZMAIE
+        </Link>
+        <Link href="/" className={NavbarSocialLinks}>
+          <IconContext.Provider value={{ color: "", className: "", size: "2.4em" }}>
+            <CiInstagram></CiInstagram>
+          </IconContext.Provider>
         </Link>
       </nav>
-      <nav className='navbar__item opacity-0 h-min mt-auto mb-auto w-1/3 flex flex-row justify-end'>
+      <nav className='navbar__item opacity-0 h-full w-1/3 flex flex-row justify-end'>
         <Link href='/project' className={NavbarSideLinks}>
           PROJECTS
         </Link>
