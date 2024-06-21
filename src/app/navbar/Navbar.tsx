@@ -30,8 +30,10 @@ const Navbar = () => {
   const pathname = usePathname().split("/")[1].toString().toUpperCase();
   const projectName = useSearchParams().get('project');
 
-  if (projectName === null) {
-    useText = pathname;
+  if (pathname == '') {
+    useText = '';
+  } else if (projectName === null) {
+    useText = `... ${pathname} ...`;
   } else {
     console.log(useText);
     useText = projectName!.toString().toUpperCase();

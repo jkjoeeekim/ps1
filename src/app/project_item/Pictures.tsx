@@ -34,7 +34,17 @@ const Pictures = () => {
     for (let i = 1; i <= projectImageCount; i++) {
       if (i % 2 == 0) {
         galleryLeftLinks.push(
-          <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={0} height={0} sizes='100vw' className={leftImageClassName} style={{ width: '100%', height: 'auto' }}></Image>
+          <Image 
+          src={linkName[0] + projectInitials + i + linkName[1]} 
+          priority 
+          key={i} 
+          alt='works'
+          width={0}
+          height={0} 
+          sizes='100vw'
+          className={leftImageClassName}
+          style={{ width: '100%', height: 'auto' }}
+        ></Image>
         )
       } else {
         galleryRightLinks.push(
