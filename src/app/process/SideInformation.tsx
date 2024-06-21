@@ -8,10 +8,7 @@ const myFontLighter = localFont({ src: "../../sinkin-sans/SinkinSans-200XLight.o
 
 const SideInformation = () => {
   return (
-    <div className='h-full w-full flex flex-col justify-between text-center'>
-      <section className=''>
-        <div className={`${myFontBold.className} text-xl font-bold tracking-widest mb-3`}>PROCESS</div>
-      </section>
+    <div className='h-full w-full flex flex-col justify-around text-center'>
       <section className=''>
         <div className={`${myFontRegular.className} text-lg tracking-widest mb-3`}>PRE-DESIGN</div>
         <ol className={`${myFontLighter.className} text-base tracking-wide mb-3`}>

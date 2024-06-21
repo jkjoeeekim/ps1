@@ -17,7 +17,6 @@ const Pictures = () => {
   var galleryRightLinks = [];
 
   const searchParams = useSearchParams();
-  console.log(searchParams.get('project'));
   const projectName = searchParams.get('project');
   var projectNameArray = [''];
   if (typeof projectName !== "undefined") {
