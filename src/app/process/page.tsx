@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
@@ -31,7 +31,9 @@ const ProcessPage = () => {
 
   return (
     <main className="bg-[#fbf9f9]" ref={container}>
-      <Navbar></Navbar>
+      <Suspense>
+        <Navbar></Navbar>
+      </Suspense>
       <div className={mainSectionClass}>
         <section className={imageSectionClass}>
           <Image src={image3} alt='pic' className={imageClass} style={{ objectFit: "cover" }}></Image>

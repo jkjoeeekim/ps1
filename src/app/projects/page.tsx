@@ -3,7 +3,7 @@
 import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 
 import Navbar from '../navbar/Navbar';
 import ProjectItems from './ProjectItems';
@@ -27,10 +27,13 @@ const ProjectPage = () => {
 
   return (
     <main className='bg-[#fbf9f9]' ref={container}>
-      <Navbar></Navbar>
+      <Suspense>
+        <Navbar></Navbar>
+      </Suspense>
       <ProjectItems></ProjectItems>
       <Footer></Footer>
-    </main>  )
+    </main>  
+  )
 }
 
 export default ProjectPage

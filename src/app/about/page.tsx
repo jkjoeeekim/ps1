@@ -1,4 +1,5 @@
 import React from 'react'
+import { Suspense } from 'react';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
@@ -6,7 +7,9 @@ import Footer from '../footer/Footer';
 const AboutPage = () => {
   return (
     <main className="">
-      <Navbar></Navbar>
+      <Suspense>
+        <Navbar></Navbar>
+      </Suspense>
       <div className="w-max p-24 m-auto">
         About Page
       </div>

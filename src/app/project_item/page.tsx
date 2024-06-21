@@ -20,7 +20,9 @@ const ProjectItem = () => {
   
   return (
     <main>
-      <Navbar></Navbar>
+      <Suspense>
+        <Navbar></Navbar>
+      </Suspense>
       <Suspense>
         <Pictures></Pictures>
       </Suspense>

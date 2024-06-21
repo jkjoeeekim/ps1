@@ -3,7 +3,7 @@
 import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
@@ -26,7 +26,9 @@ const MainPage = () => {
 
   return (
     <main className="" ref={container}>
-      <Navbar></Navbar>
+      <Suspense>
+        <Navbar></Navbar>
+      </Suspense>
       <MyCarousel></MyCarousel>
       <Footer></Footer>
     </main>
