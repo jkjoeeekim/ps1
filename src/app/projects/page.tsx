@@ -14,8 +14,6 @@ const ProjectPage = () => {
   gsap.registerPlugin(useGSAP);
 
   useGSAP(() => {
-    const tl = gsap.timeline();
-
     const projectItem = gsap.utils.toArray<HTMLElement>('.project__item');
 
     projectItem.forEach((obj, i) => {
