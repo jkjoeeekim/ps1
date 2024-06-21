@@ -6,8 +6,8 @@ import "./globals.css";
 const myFont = localFont({ src: "../sinkin-sans/SinkinSans-300Light.otf" });
 
 export const metadata: Metadata = {
-  title: "Arghavan Architechture",
-  description: "Arghavan Archtechture",
+  title: "Studio Ozmaie",
+  description: "Studio Ozmaie",
 };
 
 export default function RootLayout({

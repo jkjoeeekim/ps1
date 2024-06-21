@@ -17,7 +17,6 @@ const ProjectPage = () => {
     const tl = gsap.timeline();
 
     const projectItem = gsap.utils.toArray<HTMLElement>('.project__item');
-    console.log(projectItem)
 
     projectItem.forEach((obj, i) => {
       gsap.fromTo(obj, { scale: 1.03 }, { scale: 1, opacity: 1, duration: 0.9, ease: 'power4.out' })

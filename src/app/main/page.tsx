@@ -18,7 +18,6 @@ const MainPage = () => {
     const tl = gsap.timeline();
 
     const classn = gsap.utils.toArray<HTMLElement>('.my__carousel');
-    console.log(classn)
 
     classn.forEach((obj, i) => {
       gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power4.out' })

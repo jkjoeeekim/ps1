@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Router from 'next/router';
 
-import ProjectItem from './ProjectItem';
-
 import image1 from '../assets/ps1.jpg';
 import image2 from '../assets/ps2.jpeg';
 import image3 from '../assets/ps3.jpeg';
@@ -37,7 +35,7 @@ const ProjectItems = () => {
         <section className={itemClassFirst}>
           <Link className={blackBgClass} href={{
             pathname: '/project_item',
-            query: { project: 'test project' },
+            query: { project: 'Palo Alto' },
           }}>
             <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
@@ -45,15 +43,21 @@ const ProjectItems = () => {
           <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
+          <Link className={blackBgClass} href={{
+            pathname: '/project_item',
+            query: { project: 'Palo Alto' },
+          }}>
+            <h3 className={centerTextClass}>Los Altos Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
+          <Link className={blackBgClass} href={{
+            pathname: '/project_item',
+            query: { project: 'Palo Alto' },
+          }}>
+            <h3 className={centerTextClass}>Hillsborough Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
@@ -61,48 +65,34 @@ const ProjectItems = () => {
       </nav>
       <nav className={rowClass}>
         <section className={itemClassFirst}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
+          <Link className={blackBgClass} href={{
+            pathname: '/project_item',
+            query: { project: 'Palo Alto' },
+          }}>
+            <h3 className={centerTextClass}>Los Altos Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
+          <Link className={blackBgClass} href={{
+            pathname: '/project_item',
+            query: { project: 'Palo Alto' },
+          }}>
+            <h3 className={centerTextClass}>Hillsborough Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href=''>
+          <Link className={blackBgClass} href={{
+            pathname: '/project_item',
+            query: { project: 'Palo Alto' },
+          }}>
             <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
-        </section>
-      </nav>
-      <nav className={rowClass}>
-        <section className={itemClassFirst}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
-            <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
-          </Link>
-          <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
-        </section>
-        <section className={itemClass}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
-            <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
-          </Link>
-          <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
-        </section>
-        <section className={itemClass}>
-          <Link className={blackBgClass} href=''>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
-            <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
-          </Link>
-          <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
     </nav>

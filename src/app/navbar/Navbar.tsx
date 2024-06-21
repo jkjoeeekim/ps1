@@ -14,13 +14,13 @@ import localFont from "next/font/local";
 const myFontBold = localFont({ src: "../../sinkin-sans/SinkinSans-400Regular.otf" });
 const myFontBolder = localFont({ src: "../../sinkin-sans/SinkinSans-500Medium.otf" });
 
-//* color bg-[#d9c5ac] *//
+//* color bg-[#d9c5ac] c0b7af *//
 
 // ** NAVIGATION BAR CLASSES ** //
-const Header = "text-[#110100] bg-[#c0b7af] place-content-between h-[75px] flex m-auto tracking-wide";
+const Header = "text-[#110100] bg-[#cabcac] place-content-between h-[75px] flex m-auto tracking-wide";
 const NavbarMainLink = "btn btn-ghost px-4 tracking-widest text-4xl pt-7 rounded-sm hover:pt-3 hover:bg-[#fbf9f9] duration-500 ease-in-out";
 const NavbarSideLinks = `${myFontBold.className} btn btn-ghost px-4 text-xl tracking-widest pt-10 rounded-sm hover:pt-3 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
-const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-6 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
+const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-7 rounded-sm hover:pt-2 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
 
 const Navbar = () => {
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           STUDIO OZMAIE
         </Link>
         <Link href="/" className={NavbarSocialLinks}>
-          <IconContext.Provider value={{ color: "", className: "", size: "2.4em" }}>
+          <IconContext.Provider value={{ color: "", className: "", size: "2.2em" }}>
             <CiInstagram></CiInstagram>
           </IconContext.Provider>
         </Link>

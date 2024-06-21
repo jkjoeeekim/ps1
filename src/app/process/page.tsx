@@ -23,7 +23,6 @@ const ProcessPage = () => {
 
   useGSAP(() => {
     const mainClass = gsap.utils.toArray<HTMLElement>('.main__class');
-    console.log(mainClass)
 
     mainClass.forEach((obj, i) => {
       gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power4.out' })
