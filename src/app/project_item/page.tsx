@@ -1,14 +1,19 @@
 'use client';
 import React, { use } from 'react';
 import Image from 'next/image';
+import { Suspense } from 'react';
 import { useRouter } from 'next/router';
 import { useSearchParams } from 'next/navigation';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 
+function ProjectItemFallback() {
+  return (<div>placeholder</div>)
+}
+
 const ProjectItem = () => {
-  var x;
-  var y;
+  var x = 0;
+  var y = 0;
   var halfX;
   if (typeof window !== "undefined") {
     x = window.screen.width;
@@ -41,11 +46,11 @@ const ProjectItem = () => {
     for (let i = 1; i <= projectImageCount; i++) {
       if (i % 2 == 0) {
         galleryLeftLinks.push(
-          <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={x} height={100} className='' style={{ objectFit: "cover" }}></Image>
+          <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={0} height={0} sizes='100vw' className='' style={{ width: '100%', height: 'auto' }}></Image>
         )
       } else {
         galleryRightLinks.push(
-          <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={x} height={100} className='' style={{ objectFit: "cover" }}></Image>
+          <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={0} height={0} sizes='100vw' className='' style={{ width: '100%', height: 'auto' }}></Image>
         )
       }
     }
@@ -57,10 +62,14 @@ const ProjectItem = () => {
       <div>ProjectItem:  {projectName}</div>
       <div className='w-full flex flex-row'>
         <section className='w-1/2 flex flex-col '>
-          {[...galleryLeftLinks]}
+          <Suspense fallback={<ProjectItemFallback />}>
+            {[...galleryLeftLinks]}
+          </Suspense>
         </section>
         <section className='w-1/2 flex flex-col '>
-          {[...galleryRightLinks]}
+          <Suspense fallback={<ProjectItemFallback />}>
+            {[...galleryRightLinks]}
+          </Suspense>
         </section>
       </div>
       <Footer></Footer>
