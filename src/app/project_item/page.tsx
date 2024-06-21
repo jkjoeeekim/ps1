@@ -1,5 +1,10 @@
-import React, { use } from 'react';
-import { Suspense } from 'react';
+'use client';
+
+import React from 'react';
+import { useRef, Suspense } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 import Pictures from './Pictures';
@@ -9,17 +14,22 @@ function ProjectItemFallback() {
 }
 
 const ProjectItem = () => {
-  var x = 0;
-  var y = 0;
-  var halfX;
-  if (typeof window !== "undefined") {
-    x = window.screen.width;
-    y = window.screen.height;
-    halfX = x / 2;
-  }
+  const container = useRef(null);
+  gsap.registerPlugin(useGSAP);
+
+  useGSAP(() => {
+    const projectItem = gsap.utils.toArray<HTMLElement>('.image__item');
+
+    projectItem.forEach((obj, i) => {
+      gsap.fromTo(obj, { scale: 0.95 }, { scale: 1, opacity: 1, duration: 5, ease: 'power1.inOut' })
+    });
+
+    // tl.fromTo(classn[0], { scale: 0.2 }, { scale: 1 })
+  }, { scope: container })
+
   
   return (
-    <main>
+    <main className='bg-[#fbf9f9]' ref={container}>
       <Suspense>
         <Navbar></Navbar>
       </Suspense>

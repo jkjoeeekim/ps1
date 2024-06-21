@@ -4,10 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
-function ProjectItemFallback() {
-  return (<div>placeholder</div>)
-}
-
 const Pictures = () => {
   const linkName = [
     'https://aops1.s3.us-west-1.amazonaws.com/',
@@ -31,8 +27,8 @@ const Pictures = () => {
       projectInitials += lowerCaseInitial;
     });
 
-    const rightImageClassName = 'pb-4 pr-4 pl-2'
-    const leftImageClassName = 'pb-4 pl-4 pr-2'
+    const rightImageClassName = 'image__item opacity-0 pb-4 pr-4 pl-2'
+    const leftImageClassName = 'image__item opacity-0 pb-4 pl-4 pr-2'
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= projectImageCount; i++) {
