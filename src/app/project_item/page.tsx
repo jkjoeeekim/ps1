@@ -7,6 +7,8 @@ import { useSearchParams } from 'next/navigation';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 
+export const dynamic = 'force-dynamic';
+
 function ProjectItemFallback() {
   return (<div>placeholder</div>)
 }
