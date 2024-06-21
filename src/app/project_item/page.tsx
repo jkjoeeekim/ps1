@@ -2,10 +2,11 @@
 import React, { use } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useSearchParams } from 'next/navigation';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 
-const ProjectItem = (query: any, ) => {
+const ProjectItem = () => {
   var x;
   var y;
   var halfX;
@@ -19,7 +20,14 @@ const ProjectItem = (query: any, ) => {
     '.jpg',
   ]
 
-  const projectNameArray = query.searchParams.project.split(" ");
+  const searchParams = useSearchParams();
+  console.log(searchParams.get('project'));
+  const projectName = searchParams.get('project');
+  var projectNameArray = [''];
+  if (projectName !== "null" ) {
+    projectNameArray = projectName.split(" ");
+
+  }
   var projectInitials = '';
   const projectImageCount = 28;
 
@@ -34,11 +42,11 @@ const ProjectItem = (query: any, ) => {
   for (let i = 1; i <= projectImageCount; i++) {
     if (i % 2 == 0) {
       galleryLeftLinks.push(
-        <Image src={linkName[0] + projectInitials + i + linkName[1]} priority alt='works' width={x} height={100} className='' style={{ objectFit: "cover" }}></Image>
+        <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={x} height={100} className='' style={{ objectFit: "cover" }}></Image>
       )
     } else {
       galleryRightLinks.push(
-        <Image src={linkName[0] + projectInitials + i + linkName[1]} priority alt='works' width={x} height={100} className='' style={{ objectFit: "cover" }}></Image>
+        <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={x} height={100} className='' style={{ objectFit: "cover" }}></Image>
       )
     }
   }
@@ -46,7 +54,7 @@ const ProjectItem = (query: any, ) => {
   return (
     <main>
       <Navbar></Navbar>
-      <div>ProjectItem:  {query.searchParams.project}</div>
+      <div>ProjectItem:  {projectName}</div>
       <div className='w-full flex flex-row'>
         <section className='w-1/2 flex flex-col '>
           {[...galleryLeftLinks]}
