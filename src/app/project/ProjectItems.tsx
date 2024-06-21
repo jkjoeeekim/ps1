@@ -33,7 +33,7 @@ const ProjectItems = () => {
     <nav className='flex flex-col w-screen'>
       <nav className={rowClassFirst}>
         <section className={itemClassFirst}>
-          <Link className={blackBgClass} href={{
+          <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
             query: { project: 'Palo Alto' },
           }}>
@@ -43,7 +43,7 @@ const ProjectItems = () => {
           <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href={{
+          <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
             query: { project: 'Palo Alto' },
           }}>
@@ -53,7 +53,7 @@ const ProjectItems = () => {
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href={{
+          <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
             query: { project: 'Palo Alto' },
           }}>
@@ -65,7 +65,7 @@ const ProjectItems = () => {
       </nav>
       <nav className={rowClass}>
         <section className={itemClassFirst}>
-          <Link className={blackBgClass} href={{
+          <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
             query: { project: 'Palo Alto' },
           }}>
@@ -75,7 +75,7 @@ const ProjectItems = () => {
           <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href={{
+          <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
             query: { project: 'Palo Alto' },
           }}>
@@ -85,7 +85,7 @@ const ProjectItems = () => {
           <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
-          <Link className={blackBgClass} href={{
+          <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
             query: { project: 'Palo Alto' },
           }}>
