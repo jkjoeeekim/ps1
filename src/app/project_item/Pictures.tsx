@@ -27,8 +27,8 @@ const Pictures = () => {
       projectInitials += lowerCaseInitial;
     });
 
-    const rightImageClassName = 'image__item opacity-0 pb-4 pr-4 pl-2'
-    const leftImageClassName = 'image__item opacity-0 pb-4 pl-4 pr-2'
+    const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2'
+    const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2'
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= projectImageCount; i++) {
@@ -58,35 +58,35 @@ const Pictures = () => {
     // ** THE INFORMATION SECTION ** //
     galleryRightLinks.push(
       <div key={369} className='pb-4 pr-4 pl-2 h-full w-full text-end flex flex-col justify-end'>
-        <div className='pt-4 text-md tracking-widest flex flex-row justify-end'>
-          <div className='pr-5'>
+        <div className='pt-4 tracking-widest flex flex-row justify-end'>
+          <div className='pr-5 text-lg border-r-2 border-gray-500'>
             {projectName} Residence
           </div>
-          <div className='text-yellow-500 border-l-2 pl-5 border-gray-600'>
+          <div className='text-yellow-500 pl-4 text-lg'>
             PROJECT
           </div>
         </div>
-        <div className='pt-4 text-md tracking-widest flex flex-row justify-end'>
-          <div className='pr-5'>
+        <div className='pt-4 tracking-widest flex flex-row justify-end'>
+          <div className='pr-5 text-lg border-r-2 border-gray-500'>
             Studio Ozmaie
           </div>
-          <div className='text-yellow-500 border-l-2 pl-5 border-gray-600'>
+          <div className='text-yellow-500 pl-4 text-lg'>
             INTERIORS
           </div>
         </div>
-        <div className='pt-4 text-md tracking-widest flex flex-row justify-end'>
-          <div className='pr-5'>
+        <div className='pt-4 tracking-widest flex flex-row justify-end'>
+          <div className='pr-5 text-lg border-r-2 border-gray-500'>
             Boss Architecture Firm, Brian Loffman
           </div>
-          <div className='text-yellow-500 border-l-2 pl-5 border-gray-600'>
+          <div className='text-yellow-500 pl-4 text-lg'>
             ARCHITECT
           </div>
         </div>
-        <div className='pt-4 text-md tracking-widest flex flex-row justify-end'>
-          <div className='pr-5'>
+        <div className='pt-4 tracking-widest flex flex-row justify-end'>
+          <div className='pr-5 text-lg border-r-2 border-gray-500'>
             Jenny Kardmon
           </div>
-          <div className='text-yellow-500 border-l-2 pl-5 border-gray-600'>
+          <div className='text-yellow-500 pl-4 text-lg'>
             PHOTOGRAPHER
           </div>
         </div>

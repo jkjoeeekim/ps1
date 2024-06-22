@@ -38,7 +38,7 @@ const ProcessPage = () => {
         <section className={imageSectionClass}>
           <Image src={image3} alt='pic' className={imageClass} style={{ objectFit: "cover" }}></Image>
         </section>
-        <section className='main__class opacity-0 w-1/3 p-7'>
+        <section className='main__class opacity-0 w-1/3 px-7 py-1'>
           <SideInformation></SideInformation>
         </section>
         <section className={imageSectionClass}>
