@@ -34,11 +34,11 @@ const Navbar = () => {
     useText = '';
     NavbarCurrentPage = `${myFontBolder.className}`
   } else if (projectName === null) {
-    useText = `... ${pathname} ...`;
-    NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-8 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-md`
+    useText = `. . . . ${pathname} . . . .`;
+    NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-4 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-sm`
   } else {
-    useText = `... ${projectName!.toString().toUpperCase()} ...`;
-    NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-8 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-md`
+    useText = `. . . . ${projectName!.toString().toUpperCase()} . . . .`;
+    NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-4 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-sm`
   }
   
   const container = useRef(null);
@@ -48,7 +48,7 @@ const Navbar = () => {
   const navbarItems = gsap.utils.toArray<HTMLElement>('.navbar__item');
 
   navbarItems.forEach((obj, i) => {
-    gsap.fromTo(obj, { scale: 1.13 }, { scale: 1, opacity: 1, duration: 0.9, ease: 'power4.out', })
+    gsap.fromTo(obj, { scale: 1.1 }, { scale: 1, opacity: 1, duration: 1.1, ease: 'power4.out', })
   });
   }, { scope: container })
 

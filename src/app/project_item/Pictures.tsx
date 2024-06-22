@@ -59,35 +59,35 @@ const Pictures = () => {
     galleryRightLinks.push(
       <div key={369} className='pb-4 pr-4 pl-2 h-full w-full text-end flex flex-col justify-end'>
         <div className='pt-4 tracking-widest flex flex-row justify-end'>
-          <div className='pr-5 text-lg border-r-2 border-gray-500'>
-            {projectName} Residence
+          <div className='text-lg'>
+            {projectName} Residence . . . . . .
           </div>
-          <div className='text-yellow-500 pl-4 text-lg'>
-            PROJECT
-          </div>
-        </div>
-        <div className='pt-4 tracking-widest flex flex-row justify-end'>
-          <div className='pr-5 text-lg border-r-2 border-gray-500'>
-            Studio Ozmaie
-          </div>
-          <div className='text-yellow-500 pl-4 text-lg'>
-            INTERIORS
+          <div className='text-yellow-500 pl-2 text-lg'>
+            . . . . . . PROJECT
           </div>
         </div>
         <div className='pt-4 tracking-widest flex flex-row justify-end'>
-          <div className='pr-5 text-lg border-r-2 border-gray-500'>
-            Boss Architecture Firm, Brian Loffman
+          <div className='text-lg'>
+            Studio Ozmaie . . . . . .
           </div>
-          <div className='text-yellow-500 pl-4 text-lg'>
-            ARCHITECT
+          <div className='text-yellow-500 pl-2 text-lg'>
+            . . . . . . INTERIORS
           </div>
         </div>
         <div className='pt-4 tracking-widest flex flex-row justify-end'>
-          <div className='pr-5 text-lg border-r-2 border-gray-500'>
-            Jenny Kardmon
+          <div className='text-lg'>
+            Boss Architecture Firm, Brian Loffman . . . . . .
           </div>
-          <div className='text-yellow-500 pl-4 text-lg'>
-            PHOTOGRAPHER
+          <div className='text-yellow-500 pl-2 text-lg'>
+            . . . . . . ARCHITECT
+          </div>
+        </div>
+        <div className='pt-4 tracking-widest flex flex-row justify-end'>
+          <div className='text-lg'>
+            Jenny Kardmon . . . .
+          </div>
+          <div className='text-yellow-500 pl-2 text-lg'>
+            . . . . PHOTOGRAPHER
           </div>
         </div>
       </div>
@@ -96,10 +96,10 @@ const Pictures = () => {
   return (
     <div className='w-full flex flex-col'>
       <div className='w-full flex flex-row'>
-        <section className='w-1/2 flex flex-col pt-4'>
+        <section className='w-1/2 flex flex-col pt-2'>
           {[...galleryLeftLinks]}
         </section>
-        <section className='w-1/2 flex flex-col pt-4'>
+        <section className='w-1/2 flex flex-col pt-2'>
           {[...galleryRightLinks]}
         </section>
       </div>

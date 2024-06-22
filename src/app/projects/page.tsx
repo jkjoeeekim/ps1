@@ -17,7 +17,7 @@ const ProjectPage = () => {
     const projectItem = gsap.utils.toArray<HTMLElement>('.project__item');
 
     projectItem.forEach((obj, i) => {
-      gsap.fromTo(obj, { scale: 1.03 }, { scale: 1, opacity: 1, duration: 0.9, ease: 'power4.out' })
+      gsap.fromTo(obj, { scale: 1.05 }, { scale: 1, opacity: 1, duration: 1.1, ease: 'power4.out' })
     });
 
     // tl.fromTo(classn[0], { scale: 0.2 }, { scale: 1 })

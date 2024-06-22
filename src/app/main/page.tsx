@@ -20,7 +20,7 @@ const MainPage = () => {
     const classn = gsap.utils.toArray<HTMLElement>('.my__carousel');
 
     classn.forEach((obj, i) => {
-      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power4.out' })
+      gsap.fromTo(obj, { scale: 1.03 }, { opacity: 1, scale: 1, duration: 1.1, ease: 'power4.out' })
     });
   }, { scope: container })
 
