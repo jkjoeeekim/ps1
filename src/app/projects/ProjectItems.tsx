@@ -40,7 +40,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
+          <Image src={image1} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
@@ -50,7 +50,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Los Altos Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
+          <Image src={image2} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
@@ -60,7 +60,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Hillsborough Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
+          <Image src={image3} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
       <nav className={rowClass}>
@@ -72,7 +72,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Los Altos Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image2} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
+          <Image src={image2} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
@@ -82,7 +82,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Hillsborough Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image3} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
+          <Image src={image3} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
@@ -92,7 +92,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image1} alt='Pic1' className={imageClass} style={{ objectFit: "cover" }}></Image>
+          <Image src={image1} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
     </nav>

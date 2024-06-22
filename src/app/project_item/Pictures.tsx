@@ -36,7 +36,7 @@ const Pictures = () => {
         galleryLeftLinks.push(
           <Image 
           src={linkName[0] + projectInitials + i + linkName[1]} 
-          priority 
+          priority={true}
           key={i} 
           alt='works'
           width={0}
