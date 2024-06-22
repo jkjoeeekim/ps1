@@ -96,10 +96,10 @@ const Pictures = () => {
   return (
     <div className='w-full flex flex-col'>
       <div className='w-full flex flex-row'>
-        <section className='w-1/2 flex flex-col pt-2'>
+        <section className='w-1/2 flex flex-col py-2'>
           {[...galleryLeftLinks]}
         </section>
-        <section className='w-1/2 flex flex-col pt-2'>
+        <section className='w-1/2 flex flex-col py-2'>
           {[...galleryRightLinks]}
         </section>
       </div>

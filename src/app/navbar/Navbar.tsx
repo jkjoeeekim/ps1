@@ -38,6 +38,7 @@ const Navbar = () => {
     NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-4 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-sm`
   } else {
     useText = `. . . . ${projectName!.toString().toUpperCase()} . . . .`;
+    useText = `. . . PROJECT / ${projectName!.toString().toUpperCase()} . . .`;
     NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-4 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-sm`
   }
   
