@@ -20,10 +20,10 @@ const myFontBolder = localFont({ src: "../../sinkin-sans/SinkinSans-500Medium.ot
 
 // ** NAVIGATION BAR CLASSES ** //
 const Header = "text-[#110100] bg-[#cabcac] place-content-between h-[75px] flex m-auto tracking-wide";
-const NavbarMainLink = "btn btn-ghost px-4 tracking-widest text-4xl pt-7 hover:pt-3 hover:bg-[#fbf9f9] duration-500 ease-in-out";
+const NavbarMainLink = "btn btn-ghost px-4 tracking-widest text-4xl pt-7 hover:pt-4 hover:bg-[#fbf9f9] duration-300 ease-in-out";
 var NavbarCurrentPage = '';
-const NavbarSideLinks = `${myFontBolder.className} btn btn-ghost px-4 text-md tracking-widest pt-10 hover:pt-4 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
-const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-7 hover:pt-3 hover:bg-[#fbf9f9] duration-500 ease-in-out`;
+const NavbarSideLinks = `${myFontBolder.className} btn btn-ghost px-4 text-md tracking-widest pt-10 hover:pt-7 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
+const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-7 hover:pt-4 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
 
 const Navbar = () => {
   var useText = '';
