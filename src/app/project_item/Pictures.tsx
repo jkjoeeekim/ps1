@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
@@ -29,10 +29,21 @@ const Pictures = () => {
     //   projectInitials += lowerCaseInitial;
     // });
 
-    const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2'
-    const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2'
+    const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2 hover:cursor-pointer'
+    const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
 
-    console.log(linkName[0] + projectNameArray[0] + linkName[1] + linkName[2])
+    // ** useState TO TRACK IF PICTURE IS CLICKED ** //
+    const [isFocused, setFocused] = useState(false);
+    var display;
+
+    if (isFocused) {
+      display = (
+        <div>
+          nothing
+        </div>
+      )
+    }
+
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= projectImageCount; i++) {
       if (i % 2 == 0) {
@@ -40,6 +51,7 @@ const Pictures = () => {
           <Image 
           src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
           priority={true}
+          onClick={() => setFocused(true)}
           key={i} 
           alt='works'
           width={0}
@@ -54,6 +66,7 @@ const Pictures = () => {
           <Image src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
           priority={true} 
           key={i} 
+          onClick={() => setFocused(true)}
           alt='works' 
           width={0} 
           height={0} 
@@ -63,9 +76,7 @@ const Pictures = () => {
         ></Image>
         )
       }
-    }
-
-    const infoItemClassName = '';
+    };
 
     // ** THE INFORMATION SECTION ** //
     galleryRightLinks.push(
@@ -104,8 +115,10 @@ const Pictures = () => {
         </div>
       </div>
     )
-  }
-  return (
+  };
+
+  if (display == undefined) {
+    display = (
     <div className='w-full flex flex-col'>
       <div className='w-full flex flex-row'>
         <section className='w-1/2 flex flex-col py-2'>
@@ -116,7 +129,9 @@ const Pictures = () => {
         </section>
       </div>
     </div>
-  )
+  );
+}
+  return display
 }
 
 export default Pictures
