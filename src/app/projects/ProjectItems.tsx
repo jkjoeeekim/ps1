@@ -37,7 +37,7 @@ const ProjectItems = () => {
             pathname: '/project_item',
             query: { project: 'fullresolutionfinaledit$$PS$$.jpg$$21' },
           }}>
-            <h3 className={centerTextClass}>Palo Alto Residence</h3>
+            <h3 className={centerTextClass}>Unknown Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image1} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
@@ -47,7 +47,7 @@ const ProjectItems = () => {
             pathname: '/project_item',
             query: { project: 'Greenridge$$GR$$.jpg$$36' },
           }}>
-            <h3 className={centerTextClass}>Los Altos Residence</h3>
+            <h3 className={centerTextClass}>Greenridge Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image2} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
@@ -57,13 +57,13 @@ const ProjectItems = () => {
             pathname: '/project_item',
             query: { project: 'Rodeo+Dr$$RD$$.jpeg$$20' },
           }}>
-            <h3 className={centerTextClass}>Hillsborough Residence</h3>
+            <h3 className={centerTextClass}>Beverly Hills Office</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
           <Image src={image3} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
-      <nav className={rowClass}>
+      {/* <nav className={rowClass}>
         <section className={itemClassFirst}>
           <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
@@ -94,7 +94,7 @@ const ProjectItems = () => {
           </Link>
           <Image src={image1} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
-      </nav>
+      </nav> */}
     </nav>
   )
 }
