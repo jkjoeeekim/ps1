@@ -25,23 +25,27 @@ var NavbarCurrentPage = '';
 const NavbarSideLinks = `${myFontBolder.className} btn btn-ghost px-4 text-md tracking-widest pt-10 hover:pt-7 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
 const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-7 hover:pt-4 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
 
-const Navbar = () => {
-  var useText = '';
-  const pathname = usePathname().split("/")[1].toString().toUpperCase();
+var CurrentPageClass = '';
+
+
+// ** Function to return class name ** //
+function getClass(pageName: String) {
+  var useClass = '';
+
+  const pathname = usePathname().split("/")[1].toString().toLocaleLowerCase();
   const projectName = useSearchParams().get('project');
 
-  if (pathname == '') {
-    useText = '';
-    NavbarCurrentPage = `${myFontBolder.className}`
-  } else if (projectName === null) {
-    useText = `. . . . ${pathname} . . . .`;
-    NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-4 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-sm`
+  if (pathname == pageName) {
+    useClass = `${myFontBolder.className} btn btn-ghost px-4 text-md tracking-widest pt-7 bg-[#fbf9f9] duration-300 ease-in-out`;
   } else {
-    useText = `. . . . ${projectName!.toString().toUpperCase()} . . . .`;
-    useText = `. . . PROJECT / ${projectName!.toString().toUpperCase()} . . .`;
-    NavbarCurrentPage = `${myFontBolder.className} btn btn-ghost px-4 text-[#2e2826] bg-[#fbf9f9] tracking-widest mt-11 pt-3 hover:cursor-default text-md rounded-t-sm`
-  }
+    useClass = NavbarSideLinks;
+  };
   
+  return(useClass)
+}
+
+
+const Navbar = () => {
   const container = useRef(null);
   gsap.registerPlugin(useGSAP);
 
@@ -71,16 +75,16 @@ const Navbar = () => {
         </h3>
       </nav> */}
       <nav className='navbar__item opacity-0 h-full w-1/3 flex flex-row justify-end'>
-        <Link href='/projects' className={NavbarSideLinks}>
+        <Link href='/projects' className={getClass('projects')}>
           PROJECTS
         </Link>
-        <Link href='/process' className={NavbarSideLinks}>
+        <Link href='/process' className={getClass('process')}>
           PROCESS
         </Link>
-        <Link href='/about' className={NavbarSideLinks}>
+        <Link href='/about' className={getClass('about')}>
           ABOUT
         </Link>
-        <Link href='/contact' className={NavbarSideLinks}>
+        <Link href='/contact' className={getClass('contact')}>
           CONTACT
         </Link>
       </nav>
