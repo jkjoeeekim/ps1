@@ -25,7 +25,7 @@ const NavbarSideLinks = `${myFontBolder.className} btn btn-ghost px-4 text-md tr
 const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-7 hover:pt-4 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
 
 // ** Function to return class name ** //
-function getClass(pageName: String) {
+function GetClass(pageName: String) {
   var useClass = '';
 
   const pathname = usePathname().split("/")[1].toString().toLocaleLowerCase();
@@ -71,16 +71,16 @@ const Navbar = () => {
         </h3>
       </nav> */}
       <nav className='navbar__item opacity-0 h-full w-1/3 flex flex-row justify-end'>
-        <Link href='/projects' className={getClass('projects')}>
+        <Link href='/projects' className={GetClass('projects')}>
           PROJECTS
         </Link>
-        <Link href='/process' className={getClass('process')}>
+        <Link href='/process' className={GetClass('process')}>
           PROCESS
         </Link>
-        <Link href='/about' className={getClass('about')}>
+        <Link href='/about' className={GetClass('about')}>
           ABOUT
         </Link>
-        <Link href='/contact' className={getClass('contact')}>
+        <Link href='/contact' className={GetClass('contact')}>
           CONTACT
         </Link>
       </nav>
