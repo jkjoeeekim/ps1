@@ -35,7 +35,7 @@ const ProjectItems = () => {
         <section className={itemClassFirst}>
           <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
-            query: { project: 'Palo Alto' },
+            query: { project: 'fullresolutionfinaledit$$PS$$.jpg$$21' },
           }}>
             <h3 className={centerTextClass}>Palo Alto Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
@@ -45,7 +45,7 @@ const ProjectItems = () => {
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
-            query: { project: 'Palo Alto' },
+            query: { project: 'Greenridge$$GR$$.jpg$$36' },
           }}>
             <h3 className={centerTextClass}>Los Altos Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
@@ -55,7 +55,7 @@ const ProjectItems = () => {
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
             pathname: '/project_item',
-            query: { project: 'Palo Alto' },
+            query: { project: 'Rodeo+Dr$$RD$$.jpeg$$20' },
           }}>
             <h3 className={centerTextClass}>Hillsborough Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>

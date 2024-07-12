@@ -65,11 +65,11 @@ const Navbar = () => {
           </IconContext.Provider>
         </Link>
       </nav>
-      <nav className='navbar__item opacity-0 h-full w-1/3 flex flex-row justify-center'>
+      {/* <nav className='navbar__item opacity-0 h-full w-1/3 flex flex-row justify-center'>
         <h3 className={NavbarCurrentPage}>
           {useText}
         </h3>
-      </nav>
+      </nav> */}
       <nav className='navbar__item opacity-0 h-full w-1/3 flex flex-row justify-end'>
         <Link href='/projects' className={NavbarSideLinks}>
           PROJECTS

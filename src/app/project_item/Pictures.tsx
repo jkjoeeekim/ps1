@@ -7,6 +7,7 @@ import { useSearchParams } from 'next/navigation';
 const Pictures = () => {
   const linkName = [
     'https://aops1.s3.us-west-1.amazonaws.com/',
+    '/',
     '.jpg',
   ]
   var galleryLeftLinks = [];
@@ -16,26 +17,28 @@ const Pictures = () => {
   const projectName = searchParams.get('project');
   var projectNameArray = [''];
   if (typeof projectName !== "undefined") {
-    projectNameArray = projectName!.split(" ");
+    projectNameArray = projectName!.split("$$");
 
-    var projectInitials = '';
-    const projectImageCount = 28;
+    // var projectInitials = 'PS';
+    const projectImageCount = Number(projectNameArray[3]);
+    const projectImageType = projectNameArray[2];
 
 
-    projectNameArray.forEach((element: String) => {
-      const lowerCaseInitial = element[0].toLowerCase();
-      projectInitials += lowerCaseInitial;
-    });
+    // projectNameArray.forEach((element: String) => {
+    //   const lowerCaseInitial = element[0].toLowerCase();
+    //   projectInitials += lowerCaseInitial;
+    // });
 
     const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2'
     const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2'
 
+    console.log(linkName[0] + projectNameArray[0] + linkName[1] + linkName[2])
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= projectImageCount; i++) {
       if (i % 2 == 0) {
         galleryLeftLinks.push(
           <Image 
-          src={linkName[0] + projectInitials + i + linkName[1]} 
+          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
           priority={true}
           key={i} 
           alt='works'
@@ -48,7 +51,16 @@ const Pictures = () => {
         )
       } else {
         galleryRightLinks.push(
-          <Image src={linkName[0] + projectInitials + i + linkName[1]} priority key={i} alt='works' width={0} height={0} sizes='100vw' className={rightImageClassName} style={{ width: '100%', height: 'auto' }}></Image>
+          <Image src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
+          priority={true} 
+          key={i} 
+          alt='works' 
+          width={0} 
+          height={0} 
+          sizes='100vw' 
+          className={rightImageClassName} 
+          style={{ width: '100%', height: 'auto' }}
+        ></Image>
         )
       }
     }
