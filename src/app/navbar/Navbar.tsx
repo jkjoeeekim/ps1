@@ -21,19 +21,15 @@ const myFontBolder = localFont({ src: "../../sinkin-sans/SinkinSans-500Medium.ot
 // ** NAVIGATION BAR CLASSES ** //
 const Header = "text-[#110100] bg-[#c6b49c] place-content-between h-[75px] flex m-auto tracking-wide";
 const NavbarMainLink = "btn btn-ghost px-4 tracking-widest text-4xl pt-7 hover:pt-4 hover:bg-[#fbf9f9] duration-300 ease-in-out";
-var NavbarCurrentPage = '';
 const NavbarSideLinks = `${myFontBolder.className} btn btn-ghost px-4 text-md tracking-widest pt-10 hover:pt-7 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
 const NavbarSocialLinks = `${myFontBold.className} btn btn-ghost px-4 tracking-widest pt-7 hover:pt-4 hover:bg-[#fbf9f9] duration-300 ease-in-out`;
-
-var CurrentPageClass = '';
-
 
 // ** Function to return class name ** //
 function getClass(pageName: String) {
   var useClass = '';
 
   const pathname = usePathname().split("/")[1].toString().toLocaleLowerCase();
-  const projectName = useSearchParams().get('project');
+  // const projectName = useSearchParams().get('project');
 
   if (pathname == pageName) {
     useClass = `${myFontBolder.className} btn btn-ghost px-4 text-md tracking-widest pt-7 bg-[#fbf9f9] duration-300 ease-in-out`;
