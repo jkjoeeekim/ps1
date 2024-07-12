@@ -7,7 +7,7 @@ import Router from 'next/router';
 
 import image1 from '../assets/ps1.jpg';
 import image2 from '../assets/ps2.jpeg';
-import image3 from '../assets/ps3.jpeg';
+// import image3 from '../assets/ps3.jpeg';
 import blackBg from '../assets/black_bg.jpeg';
 
 const ProjectItems = () => {
@@ -40,7 +40,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Unknown Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image1} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
+          <Image src={'https://aops1.s3.us-west-1.amazonaws.com/fullresolutionfinaledit/PS6.jpg'} alt='Pic1' width={500} height={500} className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
@@ -50,7 +50,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Greenridge Residence</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image2} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
+          <Image src={'https://aops1.s3.us-west-1.amazonaws.com/Greenridge/GR33.jpg'} alt='Pic1' width={1200} height={500} className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
         <section className={itemClass}>
           <Link prefetch={false} className={blackBgClass} href={{
@@ -60,7 +60,7 @@ const ProjectItems = () => {
             <h3 className={centerTextClass}>Beverly Hills Office</h3>
             <Image src={blackBg} alt='Pic1' className='w-full h-full' style={{ objectFit: "cover" }}></Image>
           </Link>
-          <Image src={image3} alt='Pic1' className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
+          <Image src={'https://aops1.s3.us-west-1.amazonaws.com/Rodeo+Dr/RD1.jpeg'} alt='Pic1' width={500} height={500} className={imageClass} priority={true} style={{ objectFit: "cover" }}></Image>
         </section>
       </nav>
       {/* <nav className={rowClass}>
