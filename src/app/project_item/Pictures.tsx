@@ -5,6 +5,18 @@ import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
 const Pictures = () => {
+  // ** useState TO TRACK IF PICTURE IS CLICKED ** //
+  const [isFocused, setFocused] = useState(false);
+  var display;
+
+  if (isFocused) {
+    display = (
+      <div>
+        nothing
+      </div>
+    )
+  }
+  
   const linkName = [
     'https://aops1.s3.us-west-1.amazonaws.com/',
     '/',
@@ -31,18 +43,6 @@ const Pictures = () => {
 
     const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2 hover:cursor-pointer'
     const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
-
-    // ** useState TO TRACK IF PICTURE IS CLICKED ** //
-    const [isFocused, setFocused] = useState(false);
-    var display;
-
-    if (isFocused) {
-      display = (
-        <div>
-          nothing
-        </div>
-      )
-    }
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= projectImageCount; i++) {
