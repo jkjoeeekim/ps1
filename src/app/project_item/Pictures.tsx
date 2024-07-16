@@ -45,7 +45,7 @@ const Pictures = () => {
     const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
-    for (let i = 1; i <= projectImageCount; i++) {
+    for (let i = 1; i <= 6; i++) {
       if (i % 2 == 0) {
         galleryLeftLinks.push(
           <Image 
@@ -65,6 +65,36 @@ const Pictures = () => {
         galleryRightLinks.push(
           <Image src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
           priority={true} 
+          key={i} 
+          onClick={() => setFocused(true)}
+          alt='works' 
+          width={0} 
+          height={0} 
+          sizes='100vw' 
+          className={rightImageClassName} 
+          style={{ width: '100%', height: 'auto' }}
+        ></Image>
+        )
+      }
+    };
+    for (let i = 7; i <= projectImageCount; i++) {
+      if (i % 2 == 0) {
+        galleryLeftLinks.push(
+          <Image 
+          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
+          onClick={() => setFocused(true)}
+          key={i} 
+          alt='works'
+          width={0}
+          height={0} 
+          sizes='100vw'
+          className={leftImageClassName}
+          style={{ width: '100%', height: 'auto' }}
+        ></Image>
+        )
+      } else {
+        galleryRightLinks.push(
+          <Image src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
           key={i} 
           onClick={() => setFocused(true)}
           alt='works' 
