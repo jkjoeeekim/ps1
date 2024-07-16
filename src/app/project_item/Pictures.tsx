@@ -45,7 +45,7 @@ const Pictures = () => {
     const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 4; i++) {
       if (i % 2 == 0) {
         galleryLeftLinks.push(
           <Image 
@@ -77,7 +77,7 @@ const Pictures = () => {
         )
       }
     };
-    for (let i = 7; i <= projectImageCount; i++) {
+    for (let i = 5; i <= projectImageCount; i++) {
       if (i % 2 == 0) {
         galleryLeftLinks.push(
           <Image 
