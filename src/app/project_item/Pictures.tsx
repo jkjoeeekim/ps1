@@ -16,16 +16,13 @@ const Pictures = () => {
     let img = allLinks[num];
     console.log(img);
     setImgNum(num);
-    setFocused(true);
+    if (isFocused) {
+      setFocused(false)
+    } else {
+      setFocused(true);
+    }
+    // setFocused(true);
   };
-
-  if (isFocused) {
-    display = (
-      <div className='w-full h-full'>
-        {allLinks[imgNum]}
-      </div>
-    )
-  }
   
   const linkName = [
     'https://aops1.s3.us-west-1.amazonaws.com/',
@@ -51,55 +48,85 @@ const Pictures = () => {
     //   projectInitials += lowerCaseInitial;
     // });
 
-    const rightImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
-    const leftImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2 hover:cursor-pointer'
+    const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
+    const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2 hover:cursor-pointer'
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= 4; i++) {
-      let img = (
-        <Image
-          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
-          priority={true}
-          onClick={() => onImgClick(i)}
-          key={i}
-          alt='works'
-          width={0}
-          height={0}
-          sizes='100vw'
-          className={leftImageClassName}
-          style={{ width: '100%', height: 'auto' }}
-        ></Image>
-      );
-
-      allLinks.push(img);
-      
       if (i % 2 == 0) {
+        let img = (
+          <Image
+            src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
+            priority={true}
+            onClick={() => onImgClick(i)}
+            key={i}
+            alt='works'
+            width={0}
+            height={0}
+            sizes='100vw'
+            className={rightImageClassName}
+            style={{ width: '100%', height: 'auto' }}
+          ></Image>
+        );
+
+        allLinks.push(img);
         galleryRLinks.push(img)
       } else {
+        let img = (
+          <Image
+            src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
+            priority={true}
+            onClick={() => onImgClick(i)}
+            key={i}
+            alt='works'
+            width={0}
+            height={0}
+            sizes='100vw'
+            className={leftImageClassName}
+            style={{ width: '100%', height: 'auto' }}
+          ></Image>
+        );
+
+        allLinks.push(img);
         galleryLLinks.push(img)
       }
     };
     for (let i = 5; i <= projectImageCount; i++) {
-      let img = (
-        <Image
-          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
-          priority={true}
-          onClick={() => onImgClick(i)}
-          key={i}
-          alt='works'
-          width={0}
-          height={0}
-          sizes='100vw'
-          className={leftImageClassName}
-          style={{ width: '100%', height: 'auto' }}
-        ></Image>
-      );
-
-      allLinks.push(img);
-      
       if (i % 2 == 0) {
+        let img = (
+          <Image
+            src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
+            priority={true}
+            onClick={() => onImgClick(i)}
+            key={i}
+            alt='works'
+            width={0}
+            height={0}
+            sizes='100vw'
+            className={rightImageClassName}
+            style={{ width: '100%', height: 'auto' }}
+          ></Image>
+        );
+
+        allLinks.push(img);
         galleryRLinks.push(img)
       } else {
+        let img = (
+          <Image
+            src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
+            priority={true}
+            onClick={() => onImgClick(i)}
+            key={i}
+            alt='works'
+            width={0}
+            height={0}
+            sizes='100vw'
+            className={leftImageClassName}
+            style={{ width: '100%', height: 'auto' }}
+          ></Image>
+        );
+
+        allLinks.push(img);
         galleryLLinks.push(img)
       }
     };
@@ -143,10 +170,49 @@ const Pictures = () => {
     )
   };
 
-  if (display == undefined) {
-    display = (
+  // if (isFocused) {
+  //   display = (
+  //     <div className='w-full h-full'>
+  //       <section className='w-1/2 flex flex-col py-2'>
+  //         {allLinks[(imgNum - 1)]}
+  //       </section>
+  //     </div>
+  //   )
+  // } else {
+  //   display = (
+  //     <div className='w-full flex flex-col'>
+  //       <div className='w-full flex flex-row'>
+  //         <section className='w-1/2 flex flex-col py-2'>
+  //           {[...galleryLLinks]}
+  //         </section>
+  //         <section className='w-1/2 flex flex-col py-2'>
+  //           {[...galleryRLinks]}
+  //         </section>
+  //       </div>
+  //     </div>
+  //   );
+  // };
+  // return display
+
+  var galleryClassName = ""
+  var totalViewClassName = ""
+
+  if (isFocused) {
+    galleryClassName = "w-full flex flex-col py-2"
+    totalViewClassName = "hidden w-full flex flex-row"
+  } else {
+    galleryClassName = "hidden w-full flex flex-col py-2"
+    totalViewClassName = "w-full flex flex-row"
+  }
+
+  return(
     <div className='w-full flex flex-col'>
-      <div className='w-full flex flex-row'>
+      <div className={galleryClassName}>
+        <section className='h-screen flex flex-row'>
+          {[...allLinks]}
+        </section>
+      </div>
+      <div className={totalViewClassName}>
         <section className='w-1/2 flex flex-col py-2'>
           {[...galleryLLinks]}
         </section>
@@ -155,9 +221,7 @@ const Pictures = () => {
         </section>
       </div>
     </div>
-  );
-}
-  return display
+  )
 }
 
 export default Pictures
