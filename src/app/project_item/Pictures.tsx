@@ -212,6 +212,7 @@ const Pictures = () => {
   } else {
     galleryClassName = "hidden w-full flex flex-col py-2"
     totalViewClassName = "w-full flex flex-row"
+    show = [...allLinks];
   }
 
   return(
