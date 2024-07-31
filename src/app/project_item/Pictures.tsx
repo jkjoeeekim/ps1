@@ -7,12 +7,22 @@ import { useSearchParams } from 'next/navigation';
 const Pictures = () => {
   // ** useState TO TRACK IF PICTURE IS CLICKED ** //
   const [isFocused, setFocused] = useState(false);
+  const [imgNum, setImgNum] = useState(0);
+
   var display;
+  let allLinks:any = [];
+
+  function onImgClick(num: number) {
+    let img = allLinks[num];
+    console.log(img);
+    setImgNum(num);
+    setFocused(true);
+  };
 
   if (isFocused) {
     display = (
-      <div>
-        nothing
+      <div className='w-full h-full'>
+        {allLinks[imgNum]}
       </div>
     )
   }
@@ -22,8 +32,8 @@ const Pictures = () => {
     '/',
     '.jpg',
   ]
-  var galleryLeftLinks = [];
-  var galleryRightLinks = [];
+  var galleryRLinks = [];
+  var galleryLLinks = [];
 
   const searchParams = useSearchParams();
   const projectName = searchParams.get('project');
@@ -41,75 +51,61 @@ const Pictures = () => {
     //   projectInitials += lowerCaseInitial;
     // });
 
-    const rightImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2 hover:cursor-pointer'
-    const leftImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
+    const rightImageClassName = 'image__item opacity-0 py-2 pl-4 pr-2 hover:cursor-pointer'
+    const leftImageClassName = 'image__item opacity-0 py-2 pr-4 pl-2 hover:cursor-pointer'
 
     // ** CREATE IMAGE GALLERY WITH DYNAMIC LINK NAMES ** //
     for (let i = 1; i <= 4; i++) {
-      if (i % 2 == 0) {
-        galleryLeftLinks.push(
-          <Image 
-          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
+      let img = (
+        <Image
+          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
           priority={true}
-          onClick={() => setFocused(true)}
-          key={i} 
+          onClick={() => onImgClick(i)}
+          key={i}
           alt='works'
           width={0}
-          height={0} 
+          height={0}
           sizes='100vw'
           className={leftImageClassName}
           style={{ width: '100%', height: 'auto' }}
         ></Image>
-        )
+      );
+
+      allLinks.push(img);
+      
+      if (i % 2 == 0) {
+        galleryRLinks.push(img)
       } else {
-        galleryRightLinks.push(
-          <Image src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
-          priority={true} 
-          key={i} 
-          onClick={() => setFocused(true)}
-          alt='works' 
-          width={0} 
-          height={0} 
-          sizes='100vw' 
-          className={rightImageClassName} 
-          style={{ width: '100%', height: 'auto' }}
-        ></Image>
-        )
+        galleryLLinks.push(img)
       }
     };
     for (let i = 5; i <= projectImageCount; i++) {
-      if (i % 2 == 0) {
-        galleryLeftLinks.push(
-          <Image 
-          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
-          onClick={() => setFocused(true)}
-          key={i} 
+      let img = (
+        <Image
+          src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType}
+          priority={true}
+          onClick={() => onImgClick(i)}
+          key={i}
           alt='works'
           width={0}
-          height={0} 
+          height={0}
           sizes='100vw'
           className={leftImageClassName}
           style={{ width: '100%', height: 'auto' }}
         ></Image>
-        )
+      );
+
+      allLinks.push(img);
+      
+      if (i % 2 == 0) {
+        galleryRLinks.push(img)
       } else {
-        galleryRightLinks.push(
-          <Image src={linkName[0] + projectNameArray[0] + linkName[1] + projectNameArray[1] + i + projectImageType} 
-          key={i} 
-          onClick={() => setFocused(true)}
-          alt='works' 
-          width={0} 
-          height={0} 
-          sizes='100vw' 
-          className={rightImageClassName} 
-          style={{ width: '100%', height: 'auto' }}
-        ></Image>
-        )
+        galleryLLinks.push(img)
       }
     };
 
     // ** THE INFORMATION SECTION ** //
-    galleryRightLinks.push(
+    galleryRLinks.push(
       <div key={369} className='pb-4 pr-4 pl-2 h-full w-full text-end flex flex-col justify-end'>
         <div className='pt-4 tracking-widest flex flex-row justify-end'>
           <div className='text-lg'>
@@ -152,10 +148,10 @@ const Pictures = () => {
     <div className='w-full flex flex-col'>
       <div className='w-full flex flex-row'>
         <section className='w-1/2 flex flex-col py-2'>
-          {[...galleryLeftLinks]}
+          {[...galleryLLinks]}
         </section>
         <section className='w-1/2 flex flex-col py-2'>
-          {[...galleryRightLinks]}
+          {[...galleryRLinks]}
         </section>
       </div>
     </div>
