@@ -8,21 +8,12 @@ const Pictures = () => {
   // ** useState TO TRACK IF PICTURE IS CLICKED ** //
   const [isFocused, setFocused] = useState(false);
   const [imgNum, setImgNum] = useState(0);
+  const [focusPic, setFocusPic] = useState(<div></div>);
 
   var display;
   let allLinks:any = [];
 
-  function onImgClick(num: number) {
-    let img = allLinks[num];
-    console.log(img);
-    setImgNum(num);
-    if (isFocused) {
-      setFocused(false)
-    } else {
-      setFocused(true);
-    }
-    // setFocused(true);
-  };
+  
   
   const linkName = [
     'https://aops1.s3.us-west-1.amazonaws.com/',
@@ -194,12 +185,30 @@ const Pictures = () => {
   // };
   // return display
 
+  function onImgClick(num: number) {
+    let img = allLinks[num];
+    console.log(img);
+    setImgNum(num);
+    setFocusPic(allLinks[(num - 1)]);
+
+    if (isFocused) {
+      setFocused(false)
+    } else {
+      setFocused(true);
+    }
+    // setFocused(true);
+  };
+
   var galleryClassName = ""
   var totalViewClassName = ""
+  var pic;
+
+  var show = [...allLinks];
 
   if (isFocused) {
     galleryClassName = "w-full flex flex-col py-2"
     totalViewClassName = "hidden w-full flex flex-row"
+    show = allLinks[(imgNum - 1)]
   } else {
     galleryClassName = "hidden w-full flex flex-col py-2"
     totalViewClassName = "w-full flex flex-row"
@@ -209,7 +218,8 @@ const Pictures = () => {
     <div className='w-full flex flex-col'>
       <div className={galleryClassName}>
         <section className='h-screen flex flex-row'>
-          {[...allLinks]}
+          {/* {focusPic} */}
+          {show}
         </section>
       </div>
       <div className={totalViewClassName}>
